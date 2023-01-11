@@ -10,6 +10,18 @@
 </head>
 
 <body>
+
+  <!-- <header class="intructions">
+    <div>
+      <button class="show-instructions">Game instructions</button>
+
+      <div class='instruction hidden'>
+        <button class="close-instructions"></button>
+        <h1>Game rules</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </header> -->
   <main>
     <section class="player player--0 player--active">
       <h2 class="name" id="name--0">Player 1</h2>
@@ -31,8 +43,26 @@
     <img src="dice-5.png" alt="Playing dice" class="dice" />
     <button class="btn btn--new">🔄 New game</button>
     <button class="btn btn--roll">🎲 Roll dice</button>
-    <button class="btn btn--hold">📥 Hold</button>
+    <button class="btn btn--hold">📥 Hold and Switch</button>
+    <button class="btn btn--instructions">🎮Show Instructions</button>
+
   </main>
+  <div class="instructions hidden">
+    <h3 class="inst">&#8681; Instructions &#8681;</h3>
+    <ul>
+      <li>Roll the dice, the number that appears on the dice will be added to the current score. </li>
+      <li>You can roll dice untill the dice roll '1'.
+      </li>
+      <li>As 1 appears your current score will turn 0, and another player
+        will get power to roll the dice.</li>
+      <li>Before getting 1 on the dice, secure the score.</li>
+      <li>To secure the current score active player have to press hold.</li>
+      <li>The player who collects 100 scores first will win the game.</li>
+      <li>You are ready to play. All the Best</li>
+    </ul>
+  </div>
+
+  <div class="overlay hidden"></div>
   <script src="script.js"></script>
 </body>
 

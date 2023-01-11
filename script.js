@@ -14,8 +14,9 @@ const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+const btnInst = document.querySelector('.btn--instructions');
 
-
+const instructions = document.querySelector('.instructions');
 
 const switchPlayer = function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -94,3 +95,21 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNew.addEventListener('click', init);
+
+const showInst = function () {
+    instructions.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+}
+const closeInst = function () {
+    instructions.classList.add('hidden');
+    overlay.classList.add('hidden');
+}
+
+const gameInstuctions = function () {
+    instructions.classList.toggle('hidden')
+    btnInst.innerHTML = instructions.classList.contains('hidden') == true ? "🎮Show Instructions" : "🎮Hide Instructions";
+    // instructions.classList.contains('hidden') === true ? instructions.textContent = "Show Instructions" : instructions.textContent = "Hide Instructions"
+
+}
+
+btnInst.addEventListener('click', gameInstuctions);
